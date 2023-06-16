@@ -40,3 +40,9 @@ Run
 cmake /opt/geant4/calogan/generation
 ```
 This should create an executable called `generate`. To run G4 as specified in the CaloGAN repo, run `./generate -m /opt/geant4/calogan/generation/cfg/run2.mac`, in which the terminal should begin printing events.
+
+## Changing G4 Settings
+
+All settings for adjusting the G4 simulation are within `generation` in the CaloGAN subdirectory. `cfg/run2.mac` are where the beam settings are with lines starting `/gps/`. These will stay largely the same, unless you want to change the number of particles recorded under `/run/beamOn` or the energy range.
+
+In `generate/src/DetectorConstruction.cc` is more in-depth parameters for the detector geometry. 
