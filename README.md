@@ -1,2 +1,3 @@
 # HEPCAT_CaloGAN
-Repo for HEPCAT Summer School 2023 on CaloGAN
+Repository for HEPCAT Summer School 2023 on CaloGAN, run by Dylan Smith and Benjamin Nachman.
+
