@@ -6,11 +6,11 @@ Repository for HEPCAT Summer School 2023 on CaloGAN, created by Dylan Smith and 
 
 Docker is a container package similar to anaconda to build custom code environments. We will be using a docker to generate Geant4 (G4) simulations (which is very unwieldy to install from source).
 
-Docker can be installed for desktop [here](https://www.docker.com/products/docker-desktop/) 
+Docker can be installed for desktop [here](https://www.docker.com/products/docker-desktop/). 
 
 ## Step 2: Download Docker G4 Image
 
-Docker uses objects called images to build environments called containers. The entire code for this specific docker image can be found [here](https://github.com/wtakase/docker-geant4)
+Docker uses objects called images to build environments called containers. The entire code for this specific docker image can be found [here](https://github.com/wtakase/docker-geant4).
 
 Run the following line:
 ```
@@ -45,4 +45,4 @@ This should create an executable called `generate`. To run G4 as specified in th
 
 All settings for adjusting the G4 simulation are within `generation` in the CaloGAN subdirectory. `cfg/run2.mac` are where the beam settings are with lines starting `/gps/`. These will stay largely the same, unless you want to change the number of particles recorded under `/run/beamOn` or the energy range.
 
-In `generate/src/DetectorConstruction.cc` is more in-depth parameters for the detector geometry. Specifically, try changing the absorber material (defined `absorberMaterial`) and the thickness (defined `absoThickness`). 
+In `generate/src/DetectorConstruction.cc` is more in-depth parameters for the detector geometry. Specifically, try changing the absorber material (defined `absorberMaterial`) and the thickness (defined `absoThickness`). A list of possible detector materials can be found on the [GEANT4 Material Database](https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/Appendix/materialNames.html).
