@@ -31,7 +31,7 @@ docker run --rm -it -v "/path/to/download/geant4/data:/opt/geant4/data:ro" -v "p
 ```
 The ```--platform``` and G4 Docker version flag will vary based on your Docker host (AMD or ARM; see [original repo](https://github.com/wtakase/docker-geant4) for more info.
 
-This command should open what looks like a normal ```bash``` or ```root``` session, but within the Docker container specified by the G4 Docker image. 
+This command should open what looks like a normal `bash` or `root` session, but within the Docker container specified by the G4 Docker image. 
 
 ## Step 5: Compile and Run G4
 
@@ -39,4 +39,4 @@ Run
 ```
 cmake /opt/geant4/calogan/generation
 ```
-This should create an executable called `generate`
+This should create an executable called `generate`. To run G4 as specified in the CaloGAN repo, run `./generate -m /opt/geant4/calogan/generation/cfg/run2.mac`, in which the terminal should begin printing events.
