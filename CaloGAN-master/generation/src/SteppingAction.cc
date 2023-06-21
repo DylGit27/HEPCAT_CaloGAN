@@ -121,6 +121,8 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   // get volume of the current step
   // G4VPhysicalVolume* volume 
   //   = step->GetPreStepPoint()->GetTouchableHandle()->GetVolume();
+  bool isabsorber = volume->GetName()=="Abso";
+  bool issensitive = volume->GetName()=="Gap";
   
   // energy deposit
   G4double edep = step->GetTotalEnergyDeposit();
@@ -147,7 +149,9 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
     (G4RunManager::GetRunManager()->GetNonConstCurrentRun());
 
   // runData->Add(mybin, edep, stepLength); 
-  runData->Add(mybin, edep); 
+  if (issensitive){
+    runData->Add(mybin, edep); 
+  }
 
   /*
   if ( volume == fDetConstruction->GetAbsorberPV() ) {
