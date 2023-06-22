@@ -46,3 +46,7 @@ This should create an executable called `generate`. To run G4 as specified in th
 All settings for adjusting the G4 simulation are within `generation` in the CaloGAN subdirectory. `cfg/run2.mac` are where the beam settings are with lines starting `/gps/`. These will stay largely the same, unless you want to change the number of particles recorded under `/run/beamOn` or the energy range.
 
 In `generate/src/DetectorConstruction.cc` is more in-depth parameters for the detector geometry. Specifically, try changing the absorber material (defined `absorberMaterial`) and the thickness (defined `absoThickness`). A list of possible detector materials can be found on the [GEANT4 Material Database](https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/Appendix/materialNames.html).
+
+## Analysis
+
+The output of running G4 discussed above is a ROOT tree; the branches of the tree are every cell in all three calorimeter layers (with the last three cells being overflow cells). The `convert_uproot.py` script converts this ROOT file to a more ML-friendly H5 file. Run the `convert_uproot_script.sh` script to output the H5 file; be sure to change the input and output file locations. `test.h5` is an example output. Finally, `G4_Viz.ipynb` is a Jupyter notebook that goes through some simple visualization and analysis of your G4 samples.
