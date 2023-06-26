@@ -39,7 +39,7 @@ Run
 ```
 cmake /opt/geant4/calogan/generation
 ```
-This should create an executable called `generate`. To run G4 as specified in the CaloGAN repo, run `./generate -m /opt/geant4/calogan/generation/cfg/run2.mac`, in which the terminal should begin printing events.
+And then run `make` to compile the source files. This should create an executable called `generate`. To run G4 as specified in the CaloGAN repo, run `./generate -m /opt/geant4/calogan/generation/cfg/run2.mac`, in which the terminal should begin printing events.
 
 ## Changing G4 Settings
 
