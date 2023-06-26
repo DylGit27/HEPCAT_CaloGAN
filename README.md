@@ -21,7 +21,7 @@ The image is represented by different modules, so be sure to save them all to on
 
 ## Step 3: Download CaloGAN Repository
 
-The CaloGAN repo here is based upon the original repo [here](https://github.com/hep-lbdl/CaloGAN/tree/master). 
+Be sure to download this github repository; it has an augmented version of the original CaloGAN repository; the CaloGAN repo here is based upon the original repo [here](https://github.com/hep-lbdl/CaloGAN/tree/master). 
 
 ## Step 4: Run G4 in the Docker Container
 
